@@ -18,8 +18,11 @@ soup = bs.BeautifulSoup(sauce, 'lxml')
 #     print(paragraph.text)
 
 
+# print all text on a page
 # print(soup.get_text())
+
 
 # Grab all the links on a page
 for url in soup.find_all('a'):
     print(url.get('href'))
+    print(url.text)
