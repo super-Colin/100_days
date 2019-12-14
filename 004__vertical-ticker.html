@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Ticker</title>
+</head>
+
+
+<style>
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: inherit;
+    }
+
+    #ticker{
+        /* position: relative; */
+        display: flex;
+        margin-top: 300px;
+        padding: 60px;
+        font-size: 2.5rem;
+    }
+
+    .ticker__span{
+        display: inline-block;
+        margin-right: 3px;
+    }
+
+    #ticker__ul{
+        background-color: grey;
+        position: relative;
+        display: inline-block;
+        min-width: 10rem;
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        z-index: 3;
+        overflow-y: hidden;
+    }
+    #ticker__ul li{
+        list-style: none;
+        display: inline-block;
+        position: absolute;
+        transition-duration: 400ms;
+        top: 5em;
+        overflow:hidden;
+        width:0;
+    }
+</style>
+
+
+<body>
+    
+    <div id="ticker">
+        <span class="ticker__span">
+            This will display: 
+        </span>
+
+        <ul id="ticker__ul">
+            <li>list item 1 some more text</li>
+            <li>some thing for difference</li>
+            <li>more stuff to be unlike</li>
+            <li>list item 4</li>
+            <li>lorem ipsum is a thing </li>
+            <li>list item 1 some more text</li>
+            <li>some thing for difference</li>
+            <li>more stuff to be unlike</li>
+        </ul>
+    </div>
+
+
+
+    <script>
+
+        let ticker__ul = document.getElementById('ticker__ul');
+        console.log(ticker__ul);
+
+        if(ticker__ul.hasChildNodes()){
+            
+            let children = ticker__ul.children;
+            console.log(children)
+            // we'll make our own for loop since setTimeout() is non-blocking
+
+            i = 0;
+            function ticker__loop(){
+
+
+                setTimeout(function (){
+
+                    if(i == 0){
+                        console.log('new loop')
+                        children[children.length-1].style.cssText = 'top:-5em;width:auto';
+                    }else if(i == 1){
+                        children[i-1].style.cssText = 'top:-5em;width:auto;';
+                        children[children.length-1].style.cssText = 'top:5em;';
+                    }else{
+                        console.log('removing color from number ' + i + '-1')
+                        children[i-1].style.cssText = 'top:-5em;width:auto;';
+                    }
+
+                    console.log('adding color to number' + i)
+                    children[i].style.cssText = 'top:0;width:auto;';
+                    
+                    i++;
+                    if(i == children.length){
+
+                        for(i=0;i<children.length-1;i++){
+                            children[i].style.cssText = 'top: 5em;'
+                        }
+                        i=0;
+                        ticker__loop();
+
+                    }else{
+                        ticker__loop();
+                    }
+
+                },3000)
+            }
+            ticker__loop()
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+</html>
