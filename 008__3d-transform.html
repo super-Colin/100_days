@@ -1,0 +1,114 @@
+<!-- 
+# 12/17/2019
+# experimenting with 3d transforms
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <style>
+
+        
+        div{
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            transition-duration: 2000ms;
+            transform: rotate3d(0);
+            background-color: lightblue;
+            /* transform: rotate3d(1, 1, 1, 88deg); */
+        }
+        .wrapper{
+            background-color: unset;
+            margin: 10px;
+        }
+        #div1:hover{
+            transform: rotate3d(1, 0, 0, 356deg);
+        }
+        #div2:hover{
+            transform: rotate3d(0, 1, 0, 356deg);
+        }
+        #div3:hover{
+            transform: rotate3d(0, 0, 1, 356deg);
+        }
+        #div4:hover{
+            transform: rotate3d(1, 1, 0, 356deg);
+        }
+        #div5:hover{
+            transform: rotate3d(0, 1, 1, 356deg);
+        }
+        #div6:hover{
+            transform: rotate3d(1, 0, 1, 356deg);
+        }
+        #div7:hover{
+            transform: rotate3d(1, 1, 1, 356deg);
+        }
+        
+    </style>
+
+</head>
+<body>
+
+
+<div class="wrapper">
+    <div id="div1">
+        <h2>rotate3d(1, 0, 0, 356deg)</h2>
+        <p>rotate3d(1, 0, 0, 356deg)</p>
+    </div>
+</div>
+
+
+<div class="wrapper">
+    <div id="div2">
+        <h2>rotate3d(0, 1, 0, 356deg)</h2>
+        <p>rotate3d(0, 1, 0, 356deg)</p>
+    </div>
+</div>
+    
+
+<div class="wrapper">
+    <div id="div3">
+        <h2>rotate3d(0, 0, 1, 356deg)</h2>
+        <p>rotate3d(0, 0, 1, 356deg)</p>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div id="div4">
+        <h2>rotate3d(1, 1, 0, 356deg)</h2>
+        <p>rotate3d(1, 1, 0, 356deg)</p>
+    </div>
+</div>
+
+
+<div class="wrapper">
+    <div id="div5">
+        <h2>rotate3d(0, 1, 1, 356deg)</h2>
+        <p>rotate3d(0, 1, 1, 356deg)</p>
+    </div>
+</div>
+    
+
+<div class="wrapper">
+    <div id="div6">
+        <h2>rotate3d(1, 0, 1, 356deg)</h2>
+        <p>rotate3d(1, 0, 1, 356deg)</p>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div id="div7">
+        <h2>rotate3d(1, 1, 1, 356deg)</h2>
+        <p>rotate3d(1, 1, 1, 356deg)</p>
+    </div>
+</div>
+
+    
+</body>
+</html>
