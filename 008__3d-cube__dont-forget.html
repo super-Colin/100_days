@@ -1,0 +1,113 @@
+<!-- 
+# 12/17/2019
+# experimenting with 3d transforms
+ -->
+
+
+
+
+
+
+<!-- 
+
+
+Make a module that display information on 3d planes in a way that rotates and
+shows new information that was previously invisible by being 0px wide in browser perspective
+like looking at a piece of paper from the thin side
+
+
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+<style>
+    *{
+        font-size: inherit;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    
+    .scene{
+        font-size: 10rem;
+        width: 1em;
+        height:1em;
+        perspective: 600px;
+        margin: 100px;
+    }
+
+
+    .cube{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition-duration: 1000ms;
+    }
+    .cube:hover{
+        transform: rotate3d(0, 1, 1, 65deg)
+    }
+    .cube-face{
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        background-color: rgba(50, 46, 270, .5);
+    }
+    
+    .cube-face__front{
+        background-color: rgba(250, 46, 220, .5);
+    }
+    .cube-face__back{
+        
+    }
+    .cube-face__left{
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+    .cube-face__right{
+        transform: rotate3d(0, 1, 0, -90deg);
+        background-color: rgba(250, 46, 20, .5);
+    }
+    .cube-face__top{
+        transform: rotate3d(1, 0, 0, 90deg);
+        /* background-color: rgba(50, 246, 27, .5); */
+    }
+    .cube-face__bottom{
+        transform: rotate3d(1, 0, 0, -90deg);
+        
+    }
+
+
+</style>
+
+</head>
+<body>
+
+
+<div class="scene">
+
+    <div class="cube">
+        <div class="cube-face cube-face__front">front</div>
+        <div class="cube-face cube-face__back">back</div>
+        <div class="cube-face cube-face__left">left</div>
+        <div class="cube-face cube-face__right">right</div>
+        <div class="cube-face cube-face__top">top</div>
+        <div class="cube-face cube-face__bottom">bottom</div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
