@@ -1,0 +1,129 @@
+<!-- 
+# 12/17/2019
+# experimenting with 3d transforms
+Thank you to:
+/* https://3dtransforms.desandro.com/box */
+ -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+ 
+ 
+<style>
+
+:root{
+    font-size: 16px;
+}
+*{
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+.scene{
+    width:24em;
+    height: 16em;
+    margin: 25vw;
+    perspective: 500px;
+}
+.box{
+    position: relative;
+    transform-style: preserve-3d;
+    transition-duration: 3200ms;
+}
+
+.box:hover{
+    transform:rotate3d(0.5,1,1, 260deg);
+    
+}
+
+.box-face{
+    position: absolute;
+    background-color: rgba(0, 0, 250, .5);
+    font-size: 5em;
+}
+
+/*  24em wide, 16em high, and 8em deep. */
+:root{
+    --wide: 24rem;
+    --high: 16rem;
+    --deep: 8rem;
+}
+.box-face__front,
+.box-face__back{
+    /* transform: rotateY(0); */
+    width: var(--wide);
+    height: var(--high);
+}
+
+.box-face__left,
+.box-face__right{
+    /* transform: rotateY(90deg); */
+    width: var(--deep);
+    height: var(--high);
+    left: calc(calc(var(--wide) - var(--deep)) / 2 );
+}
+
+.box-face__top,
+.box-face__bottom{
+    /* transform: rotateX(90deg); */
+    width: var(--wide);
+    height: var(--deep);
+    top: calc(calc(var(--high) - var(--deep)) / 2 );
+}
+
+
+.box-face__front{
+    transform: rotateY(0) translateZ(calc(var(--deep) / 2));
+    background-color: rgba(250, 250, 0, .5);
+}
+.box-face__back{
+    transform: rotateY(180deg) translateZ(calc(var(--deep) / 2));
+    background-color: rgba(0, 250, 250, .5);
+}
+.box-face__right{
+    transform: rotateY(90deg) translateZ(calc(var(--wide) / 2));
+    background-color: rgba(250, 0, 250, .5);
+}
+.box-face__left{
+    transform: rotateY(270deg) translateZ(calc(var(--wide) / 2));
+    background-color: rgba(0, 0, 250, .5);
+}
+.box-face__top{
+    transform: rotateX(90deg) translateZ(calc(var(--high) / 2));
+    background-color: rgba(250, 0, 250, .5);
+}
+.box-face__bottom{
+    transform: rotateX(270deg) translateZ(calc(var(--high) / 2));
+    background-color: rgba(0, 250, 0, .5);
+}
+
+</style>
+ 
+ 
+</head>
+ <body>
+
+
+
+<div class="scene">
+    <div class="box">
+        <div class="box-face box-face__front">front</div>
+        <div class="box-face box-face__back">back</div>
+        <div class="box-face box-face__left">left</div>
+        <div class="box-face box-face__right">right</div>
+        <div class="box-face box-face__top">top</div>
+        <div class="box-face box-face__bottom">bottom</div>
+    </div>
+</div>
+
+
+     
+ </body>
+ </html>
