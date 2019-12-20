@@ -1,0 +1,100 @@
+<!-- 
+# 12/19/2019
+# experimenting with 3d transforms
+https://3dtransforms.desandro.com/carousel
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+
+:root{
+    --slide-width: 190px;
+    --slide-height: 120px;
+    --slide-margin: 20px;
+    --slide-translate: 288px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.scene{
+    width: calc(var(--slide-width) + var(--slide-margin));
+    height: calc(var(--slide-height) + var(--slide-margin));
+    position: relative;
+    perspective: 1000px;
+    margin: 25vw;
+}
+
+.carousel{
+    width:100%;
+    height:100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: translateZ(calc(var(--slide-translate) * -1));
+    transition-duration: 3600ms;
+}
+.carousel:hover{
+    transform: translateZ(calc(var(--slide-translate) * -1)) rotateY(240deg) ;
+}
+
+.slide{
+    font-size: 60px;
+    width: var(--slide-width);
+    height: var(--slide-height);
+    position: absolute;
+    background-color: rgba( 0, 0, 200, .5);
+    /* this center the slide and leaves a margin all around */
+    top: calc(var(--slide-margin) / 2);
+    left: calc(var(--slide-margin) / 2);
+}
+.slide:nth-child(1){transform: rotateY(0) translateZ(var(--slide-translate));
+    background-color: rgba( 0, 200, 200, .5)}
+.slide:nth-child(2){transform: rotateY(40deg) translateZ(var(--slide-translate));
+    background-color: rgba( 200, 0, 200, .5)}
+.slide:nth-child(3){transform: rotateY(80deg) translateZ(var(--slide-translate));
+    background-color: rgba( 0, 100, 200, .5)}
+.slide:nth-child(4){transform: rotateY(120deg) translateZ(var(--slide-translate));
+    background-color: rgba( 0, 200, 0, .5)}
+.slide:nth-child(5){transform: rotateY(160deg) translateZ(var(--slide-translate));
+    background-color: rgba( 100, 0, 200, .5)}
+.slide:nth-child(6){transform: rotateY(200deg) translateZ(var(--slide-translate));
+    background-color: rgba( 0, 100, 20, .5)}
+.slide:nth-child(7){transform: rotateY(240deg) translateZ(var(--slide-translate));
+    background-color: rgba( 300, 0, 20, .5)}
+.slide:nth-child(8){transform: rotateY(280deg) translateZ(var(--slide-translate));
+    background-color: rgba( 350, 0, 200, .5)}
+.slide:nth-child(9){transform: rotateY(320deg) translateZ(var(--slide-translate));
+    background-color: rgba( 350, 350, 20, .5)}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<div class="scene">
+    <div class="carousel">
+        <div class="slide">1</div>
+        <div class="slide">2</div>
+        <div class="slide">3</div>
+        <div class="slide">4</div>
+        <div class="slide">5</div>
+        <div class="slide">6</div>
+        <div class="slide">7</div>
+        <div class="slide">8</div>
+        <div class="slide">9</div>
+
+    </div>
+</div>
+    
+</body>
+</html>
