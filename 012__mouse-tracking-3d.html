@@ -1,0 +1,78 @@
+<!-- 
+12/21/2019
+this is towards an idea I have for a 3d image gallery
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mouse tracking</title>
+
+
+
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        #track-me{
+            position: relative;
+            margin:15vw;
+            background-color:darkgreen;
+            perspective: 800px;
+        }
+
+        #rotate-me{
+            /* transition-duration: 100ms; */
+            background-color: green;
+            padding: 10px 40px;
+            min-height: 600px;
+            min-width: 200px;
+            transition: translateZ 500ms;
+        }
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    <span id="mouseX"></span>
+    <br>
+    <span id="mouseY"></span>
+    <br><br>
+
+    <span id="centerX"></span>
+    <br>
+    <span id="centerX-to-border"></span>
+    <br>
+    <span id="centerY"></span>
+    <br>
+    <span id="centerY-to-border"></span>
+    <br><br>
+
+    <span id="in-object"></span>
+    <br><br>
+    
+    <span id="angle"></span>
+
+
+
+    <div id="track-me">
+        <div id="rotate-me">
+            <h1 style='text-align:center;'>Hover over me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt sed reprehenderit neque mollitia aut illo non itaque magnam asperiores deleniti, magni velit dolor voluptas at vero fugiat eaque blanditiis animi.</p>
+        </div>
+    </div>
+
+    <script src="012__mouse-tracking-3d.js"></script>
+</body>
+</html>
