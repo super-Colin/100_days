@@ -1,0 +1,105 @@
+<!-- 
+12/23/2019
+more advanced 3d gallery that can handle more than one "pane" to rotate
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mouse tracking</title>
+
+
+
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .postcard__scene{
+            perspective: 700px;
+            margin: 15vw;
+            background-color: darkmagenta;
+        
+        }
+
+        .postcard__translate-z{
+            perspective: 700px;
+            transition-duration: 500ms;
+            transform: translateZ(80px);
+            background-color: rgba( 20, 20, 20, .1);
+        }
+        .postcard__not-active{
+            transform: translateZ(0);
+        }
+
+        .postcard__rotating{
+            padding: 10px 30px;
+            background-color:darkorange;
+            min-width: 100px;
+            min-height: 300px;
+        }
+
+        .postcard__title{
+            text-align: center;
+
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    <!-- <span id="mouseX"></span>
+    <br>
+    <span id="mouseY"></span>
+    <br><br>
+
+    <span id="centerX"></span>
+    <br>
+    <span id="centerX-to-border"></span>
+    <br>
+    <span id="centerY"></span>
+    <br>
+    <span id="centerY-to-border"></span>
+    <br><br>
+
+    <span id="in-object"></span>
+    <br><br>
+    
+    <span id="angle"></span> -->
+
+    <div class="postcard__scene">
+        <div class="postcard__translate-z postcard__not-active">
+            <div class="postcard__rotating">
+                <h1 class="postcard__title">Postcards, Hover Me!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="postcard__scene">
+        <div class="postcard__translate-z postcard__not-active">
+            <div class="postcard__rotating">
+                <h1 class="postcard__title">Postcards, Hover Me!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="postcard__scene">
+        <div class="postcard__translate-z postcard__not-active">
+            <div class="postcard__rotating">
+                <h1 class="postcard__title">Postcards, Hover Me!</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="013__mouse-tracking-3d__modular.js"></script>
+</body>
+</html>
