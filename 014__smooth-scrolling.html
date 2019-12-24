@@ -1,0 +1,93 @@
+<!-- 
+// 12/24/2019
+// learning some scroll tracking
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scroll tracking</title>
+
+    
+    <style>
+    
+        *{
+            box-sizing: border-box;
+        }
+
+        .tall-block{
+            width: 10px;
+            height: 400px;
+            background-color: limegreen;
+        }
+
+/* 
+        .scroll-block{
+
+        }
+        .scroll-display{
+
+        } */
+
+
+    </style>
+
+
+</head>
+<body>
+    <button class="scroll-button" onclick="scroll_to(this)">scroll to</button>
+    <input class="scroll-input" type="range" min="10" max="1000" step="10">
+    <span class="scroll-input__display"></span>
+    <div class="tall-block"></div>
+
+
+    <div class="scroll-block">
+        <h1 class="scroll-display">scroll</h1>
+    </div>
+
+
+    <div class="tall-block"></div>
+
+    <div class="scroll-block">
+        <h1 class="scroll-display">scroll</h1>
+    </div>
+    <button class="scroll-button" onclick="scroll_to(this)">scroll to</button>
+    <input class="scroll-input" type="range" min="10" max="2000" step="10">
+    <span class="scroll-input__display"></span>
+    <div class="tall-block"></div>
+
+    <div class="tall-block"></div>
+
+    <div class="scroll-block">
+        <h1 class="scroll-display">scroll</h1>
+    </div>
+    <button class="scroll-button" onclick="scroll_to(this)">scroll to</button>
+    <input class="scroll-input" type="range" min="10" max="2000" step="10">
+    <span class="scroll-input__display"></span>
+    <div class="tall-block"></div>
+    <div class="tall-block"></div>
+
+
+    <div class="scroll-block">
+        <h1 class="scroll-display">scroll</h1>
+    </div>
+
+    <div class="tall-block"></div>
+    <button class="scroll-button" onclick="scroll_to(this)">scroll to</button>
+    <input class="scroll-input" type="range" min="10" max="3000" step="10">
+    <span class="scroll-input__display"></span>
+    <div class="tall-block"></div>
+
+    <div class="scroll-block">
+        <h1 class="scroll-display">scroll</h1>
+    </div>
+
+    <div class="tall-block"></div>
+
+
+    <script src="014__smooth-scrolling.js"></script>
+</body>
+</html>
