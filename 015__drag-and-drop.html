@@ -1,0 +1,81 @@
+<!-- 
+// 12/25/2019 X-mas!
+// Learning about dragging html elements
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dragging</title>
+
+    
+    <style>
+    
+        :root{
+            --width: 60vw;
+            --height: 20vw;
+        }
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            width: var(--width);
+            height: var(--height);
+            max-width: 100%;
+            /* height: auto; */
+            object-fit: cover;
+        }
+
+        .drag-container{
+            padding: 1vw;
+            margin: 5vw;
+            width: calc(var(--width) + 2vw);
+            height: calc(var(--height) + 2vw);
+            background-color:mediumvioletred;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <h1>Drag and droppable img</h1>
+    <div>
+
+        <div id="div1" class="drag-container" ondragover="allow_drop(event)" ondrop="drag_drop(event)">
+
+            <img id="img1" src="test.jpg" alt="" draggable="true" ondragstart="start_drag(event)">
+
+        </div>
+
+
+        <div id="div2" class="drag-container" ondragover="allow_drop(event)" ondrop="drag_drop(event)">
+
+        </div>
+
+
+        <div id="div3" class="drag-container" ondragover="allow_drop(event)" ondrop="drag_drop(event)">
+
+        </div>
+
+
+        <div id="div4" class="drag-container" ondragover="allow_drop(event)" ondrop="drag_drop(event)">
+
+        </div>
+    </div>
+
+
+
+<!-- ---------------------------------------- -->
+<script src="015__drag-and-drop.js"></script>
+
+</body>
+</html>
