@@ -1,0 +1,59 @@
+<!-- 
+// 12/27/2019
+// Working towards a 3d object that will keep spinning
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dragging</title>
+
+<style>
+
+    :root{
+        --width: 60vw;
+        --height: 15vw;
+    } 
+    *{
+        box-sizing: border-box;
+    }
+
+    .mouseover-container{
+        width: 60vw;
+        height: 20vw;
+        margin: 10vw;
+        border: 1px solid #666;
+        position: relative;
+        overflow: hidden;
+    }
+    .dot{
+        width: 4px;
+        height: 4px;
+        background-color: black;
+        position: absolute;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+    <h3>Should only draw when mouse is held down</h3>
+<!-- <canvas class="mouseover-container drag-only" id="drag-only">
+
+</canvas> -->
+
+<div class="mouseover-container" id="drag-only">
+
+
+</div>
+
+
+<script src="017__dragging.js"></script>
+</body>
+</html>
