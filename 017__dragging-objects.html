@@ -1,0 +1,70 @@
+<!-- 
+// 12/27/2019
+// Working towards a 3d object that will keep spinning
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dragging</title>
+
+<style>
+
+    :root{
+        --width: 60vw;
+        --height: 15vw;
+    } 
+    *{
+        box-sizing: border-box;
+    }
+
+    .mouseover-container{
+        width: 60vw;
+        height: 70vh;
+        margin: 10vw;
+        border: 1px solid #666;
+        position: relative;
+        overflow: hidden;
+    }
+    .dot{
+        width: 4px;
+        height: 4px;
+        background-color: black;
+        position: absolute;
+    }
+
+    #draggable{
+        display: block;
+        width: 5vw;
+        height: 5vw;
+        background-color: #ccc;
+        border-radius: 50%;
+        border: 3px solid black;
+
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+    <h3>Should be able to drag and move object around</h3>
+
+<div class="mouseover-container" id="drag-only">
+
+    <div id="draggable"></div>
+
+</div>
+
+
+<script src="017__dragging-objects.js"></script>
+</body>
+</html>
