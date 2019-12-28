@@ -1,0 +1,129 @@
+/* 
+// 12/28/2019
+// Learning about animations
+*/
+:root{
+    --puff-radius: 5vw;
+    --cloud-bg: rgba(255, 255, 255, 0.5);
+    --sky-bg: #005;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+
+.moon,
+.moon-shading{
+    display: block;
+    position: absolute;
+    right: 10vw;
+    top: 8vh;
+    width: calc(var(--puff-radius) * 2.2);
+    height: calc(var(--puff-radius) * 2.2);
+    background-color: #EFF;
+    border-radius: 50%;
+}
+.moon-shading{
+    right: 20%;
+    top: 5%;
+    background-color: var(--sky-bg);
+}
+
+.container{
+    display: block;
+    width:100vw;
+    height: 100vh;
+    background-color: var(--sky-bg);
+    overflow: hidden;
+}
+.inner-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.star{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 4px;
+    height: 4px;
+    background-color: #FFF;
+}
+.fading{
+    animation-name: star-fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes star-fade{
+    30% {background-color:#FFF}
+    50% {background-color: var(--sky-bg)}
+    60% {background-color:#FFF}
+}
+
+/* @keyframes star-fade{
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  } */
+
+
+/* .cloud{
+    background-color: var(--cloud-bg);
+    width: calc( var(--puff-radius) * 8 );
+    height: calc( var(--puff-radius) * 2 );
+    position: absolute;
+    border-radius: var(--puff-radius);
+    top: 30vh;
+    left: 9vw;
+    animation: cloud-float 5s linear 0s infinite forwards;
+} */
+.cloud{
+    background-color: var(--cloud-bg);
+    width: calc( var(--puff-radius) * 8 );
+    height: calc( var(--puff-radius) * 2 );
+    position: absolute;
+    border-radius: var(--puff-radius);
+    top: 15vh;
+    left: -50vw;
+    animation: cloud-float 6s linear 0s infinite forwards;
+}
+.cloud-puff{
+    display: block;
+    position: absolute;
+    background-color: var(--cloud-bg);
+    /* border-radius: 50%; */
+    top: calc( var(--puff-radius) * -1 );
+    border-radius: var(--puff-radius) var(--puff-radius) 0 0;
+    width: calc( var(--puff-radius) * 2 );
+    height: var(--puff-radius);
+}
+.cloud-puff:first-child{
+    left: var(--puff-radius);
+}
+.cloud-puff:nth-child(2){
+    left: calc(var(--puff-radius) * 3);
+    height: calc( var(--puff-radius) * 1.4 );
+    top: calc( var(--puff-radius) * -1.4 );
+}
+.cloud-puff:last-child{
+    left: unset;
+    right: var(--puff-radius);
+    top: calc( var(--puff-radius) * -0.8 );
+    border-radius: calc( var(--puff-radius) * 0.8) calc( var(--puff-radius) * 0.8) 0 0;
+    height: calc( var(--puff-radius) * 0.8);
+}
+
+@keyframes cloud-float{
+
+    0%{transform: translateX(0)}
+    
+    /* 10%{transform: translateX(10vw)} */
+
+    100%{transform: translateX(150vw)}
+
+}
