@@ -1,0 +1,416 @@
+/* // 12/29/2019
+// just experimenting with css and 3d */
+
+:root{
+    font-size: 16px;
+
+    --diorama__width: 31.25rem;
+    --diorama__height: 18.75rem;
+    --scene-depth: 6.25rem;
+    --number-of-layers: 6;
+    --z-between-layers: calc( var(--scene-depth) / var(--number-of-layers) );
+
+    --wood-frame-width: 1.25rem;
+    --wood-frame-color: rgb(173, 101, 13);
+    --wood-frame-color-second:rgb(203, 131, 43);
+}
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+
+
+.diorama__3d-scene{
+    perspective: 700px;
+    margin: 10vw;
+    width: var(--diorama__width);
+    height: var(--diorama__height);
+}
+
+
+.diorama__z-plane-frame{
+    perspective: 700px;
+    transition-duration: 500ms;
+    background-color: rgba( 20, 20, 20, .3);
+    transform: translateZ(80px);
+}
+
+.diorama__not-active{
+transform: translateZ(0);
+}
+
+
+.diorama__rotation-frame{
+    padding: 10px 30px;
+    background-color: var(--wood-frame-color);
+    min-width: 100px;
+    min-height: 300px;
+    width: var(--diorama__width);
+    height: var(--diorama__height);
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.diorama__rotation-frame__layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: var(--wood-frame-width);
+    overflow: hidden;
+}
+
+.diorama__layer0{
+    transform: translateZ(1px);
+    background-color: white;
+}
+.diorama__layer1{
+    z-index: 1;
+    transform: translateZ( var(--z-between-layers) );
+}
+.diorama__layer2{
+    z-index: 2;
+    transform: translateZ( calc( var(--z-between-layers) * 2) );
+}
+.diorama__layer3{
+    z-index: 3;
+    transform: translateZ( calc( var(--z-between-layers) * 3) );
+}
+.diorama__layer4{
+    z-index: 4;
+    transform: translateZ( calc( var(--z-between-layers) * 4) );
+}
+.diorama__layer5{
+    z-index: 5;
+    transform: translateZ( calc( var(--z-between-layers) * 5) );
+}
+
+
+/*  */
+.circle{
+    display: block;
+    background-color: black;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+}
+/*  */
+
+
+/* "WOOD" FRAME */
+
+.diorama__wood-frame{
+    display: block;
+    position: absolute;
+    background-color: var(--wood-frame-color);
+    z-index: 1;
+}
+
+.diorama__wood-frame__left__outer,
+.diorama__wood-frame__left__front,
+.diorama__wood-frame__left__inner,
+.diorama__wood-frame__right__outer,
+.diorama__wood-frame__right__front,
+.diorama__wood-frame__right__inner{
+    top: 0;
+    bottom: 0;
+}
+
+.diorama__wood-frame__top__outer,
+.diorama__wood-frame__top__front,
+.diorama__wood-frame__top__inner,
+.diorama__wood-frame__bottom__outer,
+.diorama__wood-frame__bottom__front,
+.diorama__wood-frame__bottom__inner{
+    left: 0;
+    right: 0;
+}
+
+/* LEFT */
+.diorama__wood-frame__left__outer,
+.diorama__wood-frame__left__front,
+.diorama__wood-frame__left__inner{
+    transform-origin: left;
+    left: 0;
+}
+.diorama__wood-frame__left__outer,
+.diorama__wood-frame__left__inner{
+    width: calc( var(--scene-depth)  + 1px);
+    transform: rotateY(-90deg);
+}
+/* .diorama__wood-frame__left__outer{background-color: #Fc2;} */
+.diorama__wood-frame__left__front{
+    width: var(--wood-frame-width);
+    transform: translateZ( var(--scene-depth) );
+    transform-origin: left;
+
+}
+.diorama__wood-frame__left__inner{
+    left: var(--wood-frame-width);
+    margin: calc( var(--wood-frame-width) - 1px) 0;
+    /* margin will decrease the height */
+    background-color: var(--wood-frame-color-second);
+}
+
+
+/* RIGHT */
+.diorama__wood-frame__right__outer,
+.diorama__wood-frame__right__front,
+.diorama__wood-frame__right__inner{
+    transform-origin: right;
+    right: 0;
+}
+.diorama__wood-frame__right__outer,
+.diorama__wood-frame__right__inner{
+    width: calc(var(--scene-depth) + 1px);
+    transform: rotateY(90deg);
+}
+/* .diorama__wood-frame__right__outer{background-color: #Fc2;} */
+.diorama__wood-frame__right__front{
+    width: var(--wood-frame-width);
+    transform: translateZ( var(--scene-depth) );
+    transform-origin: right;
+}
+.diorama__wood-frame__right__inner{
+    right: var(--wood-frame-width);
+    margin: calc( var(--wood-frame-width) - 1px) 0;
+    /* margin will decrease the height */
+    background-color: var(--wood-frame-color-second);
+}
+
+
+/* TOP */
+.diorama__wood-frame__top__outer,
+.diorama__wood-frame__top__front,
+.diorama__wood-frame__top__inner{
+    transform-origin: top;
+    top: 0;
+}
+.diorama__wood-frame__top__outer,
+.diorama__wood-frame__top__inner{
+    height: calc(var(--scene-depth) + 1px);
+    transform: rotateX(90deg);
+}
+/* .diorama__wood-frame__top__outer{background-color: #Fc2;} */
+.diorama__wood-frame__top__front{
+    height: var(--wood-frame-width);
+    transform: translateZ( var(--scene-depth) );
+    transform-origin: top;
+}
+.diorama__wood-frame__top__inner{
+    top: var(--wood-frame-width);
+    margin: 0 calc( var(--wood-frame-width) - 1px);
+    /* margin will decrease the height */
+    background-color: var(--wood-frame-color-second);
+}
+
+
+/* BOTTOM */
+.diorama__wood-frame__bottom__outer,
+.diorama__wood-frame__bottom__front,
+.diorama__wood-frame__bottom__inner{
+    transform-origin: bottom;
+    bottom: 0;
+}
+.diorama__wood-frame__bottom__outer,
+.diorama__wood-frame__bottom__inner{
+    height: calc(var(--scene-depth) + 1px);
+    transform: rotateX(-90deg);
+}
+/* .diorama__wood-frame__bottom__outer{background-color: #Fc2;} */
+.diorama__wood-frame__bottom__front{
+    height: var(--wood-frame-width);
+    transform: translateZ( var(--scene-depth) );
+    transform-origin: bottom;
+}
+.diorama__wood-frame__bottom__inner{
+    bottom: var(--wood-frame-width);
+    margin: 0 calc( var(--wood-frame-width) - 1px);
+    /* margin will decrease the height */
+    background-color: var(--wood-frame-color-second);
+}
+
+
+@media(min-width: 900px){
+    :root{
+        /* --diorama__width: 43.75rem;
+        --diorama__height: 25rem; */
+        font-size: 21px;
+    }
+}
+
+/* 
+    --diorama__width: 500px;
+    --diorama__height: 300px;
+
+    --diorama__width: 700px;
+    --diorama__height: 400px;
+*/
+
+/* THE DIORAMA */
+:root{
+    --sky-blue-light: rgb(61, 168, 221);
+    --sky-blue-dark: rgb(25, 101, 136);
+
+    --sun-height: 6.25rem;
+    --sun-light:rgb(240, 223, 74);
+    --sun-dark:rgb(238, 188, 24);
+
+    --cloud-width: 17rem;
+    --cloud-height: 4.25rem;
+    --cloud-height-small: 3.25rem;
+    --cloud-height-big: 5.75rem;
+    --could-white: rgba(250, 250, 250, 0.6);
+
+    --grass-green-light: rgb(61, 136, 17);
+    --grass-green-dark: rgb(52, 105, 21);
+
+
+    --mountain-grey-light: rgb(226, 226, 241);
+    --mountain-grey-dark: rgb(69, 69, 80);
+
+    --hill-width: 22rem;
+    --hill-height: 5rem;
+    --hill-width-big: 33rem;
+    --hill-height-big: 8rem;
+
+    
+}
+
+.sky{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(198deg, var(--sky-blue-light), var(--sky-blue-dark));
+}
+.sun{
+    display: block;
+    width: var(--sun-height);
+    height: var(--sun-height);
+    border-radius: 50%;
+    background: radial-gradient( var(--sun-light), var(--sun-dark));
+
+    position: absolute;
+    top: 7%;
+    right: 12%;
+}
+.mountain-top{
+    width: 2.5rem;
+    height: 0;
+    border-bottom: 4rem solid var(--mountain-grey-light);
+    border-right: 1.25rem solid transparent;
+    border-left: 1.25rem solid transparent;
+
+    position: absolute;
+    bottom: 7rem;
+    left: unset;
+    right: 4rem;
+}
+.mountain{
+    /* background: linear-gradient(30deg, var(--mountain-grey-light), var(--mountain-grey-dark)); */
+    width: 6.5rem;
+    height: 0;
+    border-bottom: 7rem solid var(--mountain-grey-dark);
+    border-right: 2rem solid transparent;
+    border-left: 2rem solid transparent;
+
+    position: absolute;
+    bottom: 0;
+    left: unset;
+    right: 2rem;
+}
+.cloud{
+    width: var(--cloud-width);
+    height: var(--cloud-height);
+    background-color: var(--could-white);
+    border-radius: calc(var(--cloud-height) / 2);
+
+    position: absolute;
+    top: calc(var(--cloud-height) * .5);
+    left: 11rem;
+}
+.hill{
+    display: block;
+    background:linear-gradient(-110deg, var(--grass-green-light), var(--grass-green-dark) );
+    width: var(--hill-width);
+    height: var(--hill-height);
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: calc(var(--hill-height) * -.6);
+    left: calc(var(--hill-width) * -.2);
+}
+
+
+
+/* LAYER SPECIFIC STYLES */
+
+.diorama__layer0 .cloud{
+    height: var(--cloud-height-big);
+    border-radius: var(--cloud-height-big);
+    top: calc(var(--cloud-height-big) * -.3);
+    left:  calc(var(--cloud-width) * -.3);
+}
+
+.diorama__layer1 .cloud{
+    width: calc(var(--cloud-width) * 1.2);
+    height: var(--cloud-height-small);
+    border-radius: var(--cloud-height-small);
+    top: calc(var(--diorama__height) * .45);
+    left: unset;
+    right: calc(var(--cloud-width) * -.5);
+}
+.diorama__layer1 .hill{
+    width: var(--hill-width-big);
+    height: var(--hill-height-big);
+    bottom: calc(var(--hill-height-big) * -.5);
+    left: calc(var(--hill-width-big) * -.4);
+}
+
+.diorama__layer2 .hill{
+    width: var(--hill-width-big);
+    height: var(--hill-height-big);
+    background:linear-gradient(190deg, var(--grass-green-light), var(--grass-green-dark) );
+    bottom: calc(var(--hill-height-big) * -.5);
+    left: unset;
+    right: calc(var(--hill-width-big) * -.4);
+}
+
+.diorama__layer3 .cloud{
+    height: var(--cloud-height-big);
+    border-radius: var(--cloud-height-big);
+    top: calc(var(--cloud-height) * 1.1);
+    left:  calc(var(--cloud-width) * .2);
+}
+.diorama__layer3 .hill{
+    width: var(--hill-width-big);
+    height: var(--hill-height-big);
+    bottom: calc(var(--hill-height-big) * -.6);
+    left: calc(var(--hill-width-big) * -.3);
+}
+
+.diorama__layer4 .cloud{
+    /* height: var(--cloud-height-big); */
+    /* border-radius: var(--cloud-height-big); */
+    top: calc(var(--cloud-height) * 1.8);
+    left:  calc(var(--cloud-width) * -.7);
+}
+.diorama__layer4 .hill{
+    /* width: var(--hill-width-big);
+    height: var(--hill-height-big); */
+    background:linear-gradient(190deg, var(--grass-green-light), var(--grass-green-dark) );
+    /* bottom: calc(var(--hill-height) * -.5); */
+    left: unset;
+    right: calc(var(--hill-width-big) * -.2);
+}
+
+.diorama__layer5 .cloud{
+    height: var(--cloud-height-small);
+    border-radius: var(--cloud-height-small);
+    top: calc(var(--cloud-height) * 1.1);
+    left: unset;
+    right:  calc(var(--cloud-width) * -.7);
+}

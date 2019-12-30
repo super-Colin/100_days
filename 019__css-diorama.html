@@ -1,0 +1,94 @@
+<!-- 
+// 12/29/2019
+// just experimenting with css and 3d
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Diorama</title>
+     <link rel="stylesheet" href="019__css-diorama.css">
+ </head>
+ <body>
+     
+    <div class="diorama__3d-scene">
+        <div class="diorama__z-plane-frame diorama__not-active">
+            <div class="diorama__rotation-frame">
+
+                <div class="diorama__wood-frame diorama__wood-frame__left__outer"></div>
+                <div class="diorama__wood-frame diorama__wood-frame__left__front"></div>
+                <div class="diorama__wood-frame diorama__wood-frame__left__inner"></div>
+                <!--  -->
+                <div class="diorama__wood-frame diorama__wood-frame__right__outer"></div>
+                <div class="diorama__wood-frame diorama__wood-frame__right__front"></div>
+                <div class="diorama__wood-frame diorama__wood-frame__right__inner"></div>
+                <!--  -->
+                <div class="diorama__wood-frame diorama__wood-frame__top__outer"></div>
+                <div class="diorama__wood-frame diorama__wood-frame__top__front"></div>
+                <div class="diorama__wood-frame diorama__wood-frame__top__inner"></div>
+                <!--  -->
+                <div class="diorama__wood-frame diorama__wood-frame__bottom__outer"></div>
+                <div class="diorama__wood-frame diorama__wood-frame__bottom__front"></div>
+                <div class="diorama__wood-frame diorama__wood-frame__bottom__inner"></div>
+
+
+                <!-- THE LAYERS!! :D (BACK TO FRONT) -->
+                <div class="diorama__rotation-frame__layer diorama__layer0">
+                    <div class="sky"></div>
+                    <!-- <div class="sun"></div> -->
+                    <div class="cloud"></div>
+                </div>
+
+
+                <!-- LAYER 1-->
+                <div class="diorama__rotation-frame__layer diorama__layer1">
+                    <div class="sun"></div>
+                    <div class="cloud"></div>
+                    <div class="hill"></div>
+                </div>
+
+                <!-- LAYER 2-->
+                <div class="diorama__rotation-frame__layer diorama__layer2">
+                    <div class="cloud"></div>
+                    <div class="hill"></div>
+                    <!-- <div class="mountain-top"></div>
+                    <div class="mountain"></div> -->
+                </div>
+                
+                <!-- LAYER 3-->
+                <div class="diorama__rotation-frame__layer diorama__layer3">
+                    <div class="cloud"></div>
+                    <div class="hill"></div>
+                    <div class="mountain-top"></div>
+                    <div class="mountain"></div>
+                </div>
+                
+                <!-- LAYER 4-->
+                <div class="diorama__rotation-frame__layer diorama__layer4">
+                    <div class="cloud"></div>
+                    <div class="hill"></div>
+                    <div class="hill" style="left: calc(var(--hill-width) * -.6); right: unset;"></div>
+
+                </div>
+
+                <!-- LAYER 5-->
+                <div class="diorama__rotation-frame__layer diorama__layer5">
+                    <div class="cloud"></div>
+                    <div class="cloud" style="top: calc(var(--cloud-height) * -.4); left: unset; right: 2rem;"></div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+<script src="019__css-diorama.js"></script>
+ </body>
+ </html>
