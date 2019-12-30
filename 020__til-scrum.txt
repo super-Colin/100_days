@@ -1,0 +1,59 @@
+12/30/2019
+Researching some methodologies
+
+
+https://www.scrum.org/resources/what-is-scrum
+---------------------------------
+SCRUM:
+
+Scrum (n): A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.
+
+
+Three pillars uphold every implementation of empirical process control: transparency, inspection, and adaptation.
+
+
+
+
+Values:
+    Courage, Focus, Commitment, Respect, and Openness
+
+Events: (Process)
+    Sprint
+    Sprint Planning [ADAPT]
+    Daily Scrum [ADAPT]
+    Sprint Review [INSPECTION / ADAPT]
+    Sprint Retrospective [INSPECTION / ADAPT]
+
+Artifacts: (Key Info)
+    Product Backlog
+    Sprint Backlog
+    Increment
+
+
+
+
+glossary of terms:
+    https://www.scrum.org/resources/scrum-glossary
+
+
+
+
+
+
+
+Biggest Take-aways:
+
+    Lots of sprints, lots of reviews, lots of incremented deliverables
+
+
+    "Definition of Done: a shared understanding of expectations that the Increment must live up to in order to be releasable into production. Managed by the Development Team."
+    
+
+    "All events are time-boxed. Once a Sprint begins, its duration is fixed and cannot be shortened or lengthened."
+
+
+    The Development Team is not jsut devs, it includes designers, marketing specialists etc. whoever is needed to make the team non-dependant on others
+        
+        "Scrum recognizes no sub-teams in the Development Team"
+
+    
