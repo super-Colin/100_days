@@ -16,4 +16,4 @@ interacting with a db in python and PHP
     Postgresql vs MongoDB
 
 
-Methodologies: SCRUM, AGILE
+How to style (color) readme files

@@ -1,10 +1,78 @@
 12/30/2019
-Researching some methodologies
+Researching some Agile methodologies
+---------------------------------
+---------------------------------
+
+Agile 
+AKA agile software development
+-----
+https://en.wikipedia.org/wiki/Agile_software_development
+-----
+
+The term agile (sometimes written Agile) was popularized, in this context, by the Manifesto for Agile Software Development.
 
 
-https://www.scrum.org/resources/what-is-scrum
+The Manifesto for Agile Software Development:
+    Individuals and Interactions over processes and tools
+    Working Software over comprehensive documentation
+    Customer Collaboration over contract negotiation
+    Responding to Change over following a plan
+
+
+Agile software development principles:
+    The Manifesto for Agile Software Development is based on twelve principles:
+
+    Customer satisfaction by early and continuous delivery of valuable software.
+    Welcome changing requirements, even in late development.
+    Deliver working software frequently (weeks rather than months)
+    Close, daily cooperation between business people and developers
+    Projects are built around motivated individuals, who should be trusted
+    Face-to-face conversation is the best form of communication (co-location)
+    Working software is the primary measure of progress
+    Sustainable development, able to maintain a constant pace
+    Continuous attention to technical excellence and good design
+    Simplicity—the art of maximizing the amount of work not done—is essential
+    Best architectures, requirements, and designs emerge from self-organizing teams
+    Regularly, the team reflects on how to become more effective, and adjusts accordingly
+
+
+Adaptive over predictive
+
+
+Agile vs. waterfall
+One of the differences between agile software development methods and waterfall is the approach to quality and testing. In the waterfall model, there is always a separate testing phase after a build phase; however, in agile software development testing is completed in the same iteration as programming.
+
+
+Code vs. documentation
+...  who state that developers should write documentation if that is the best way to achieve the relevant goals, but that there are often better ways to achieve those goals than writing static documentation
+ Scott Ambler states that documentation should be "just barely good enough"
+
+
+Crystal considers development a series of co-operative games, and intends that the documentation is enough to help the next win at the next game. The work products for Crystal include use cases, risk list, iteration plan, core domain models, and design notes to inform on choices...however there are no templates for these documents and descriptions are necessarily vague, but the objective is clear, just enough documentation for the next game. I always tend to characterize this to my team as: what would you want to know if you joined the team tomorrow.
+— Alistair Cockburn
+
+
+
+
+
+
+
+
+Biggest Take-aways:
+    Iterative, incremental and evolutionary
+    Efficient and face-to-face communication
+    Very short feedback loop and adaptation cycle
+
+
+
+---------------------------------
 ---------------------------------
 SCRUM:
+-----
+https://www.scrum.org/resources/what-is-scrum
+https://www.scrumguides.org/scrum-guide.html
+-----
+
 
 Scrum (n): A framework within which people can address complex adaptive problems, while productively and creatively delivering products of the highest possible value.
 
@@ -15,7 +83,7 @@ Three pillars uphold every implementation of empirical process control: transpar
 
 
 Values:
-    Courage, Focus, Commitment, Respect, and Openness
+    Courage, Focus, Commitment, Respect, and Opennessgit
 
 Events: (Process)
     Sprint
