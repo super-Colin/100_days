@@ -1,0 +1,84 @@
+/* 1/11/2020
+Just some coding for fun */
+:root{
+    --board__width: 50rem;
+
+    --board__color: #444;
+    --tile__color: #777;
+    --tile__color-2: rgb(197, 172, 31);
+    --tile__color-4: rgb(206, 160, 31);
+    --tile__color-8: rgb(218, 151, 31);
+    --tile__color-16: rgb(230, 136, 31);
+    --tile__color-32: rgb(255, 121, 31);
+    --tile__color-64: rgb(255, 106, 31);
+    --tile__color-128: rgb(255, 91, 31);
+    --tile__color-256: rgb(255, 76, 31);
+
+
+    --tile__width: calc(var(--board__width) / 5);
+    --tile__margin: calc(var(--tile__width) / 5);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.game-wrapper{
+    display: block;
+    width: var(--board__width);
+    height: var(--board__width);
+    background-color: var(-);
+    margin: 2vw;
+}
+
+.game-board{
+    padding: var(--tile__margin) var(--tile__margin) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--board__color);
+}
+.tile-spot{
+    width: var(--tile__width);
+    height: var(--tile__width);
+    margin: 0 0 var(--tile__margin) var(--tile__margin);
+    background-color: var(--tile__color);
+}
+
+.tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--tile__width);
+    height: var(--tile__width);
+    font-size: calc(var(--tile__width) / 3);
+    font-weight: bold;
+    color: #FFF;
+}
+
+.tile-2::before {content: "2";}
+.tile-2{background-color: var(--tile__color-2);}
+
+.tile-4::before {content: "4";}
+.tile-4{background-color: var(--tile__color-4);}
+
+.tile-8::before {content: "8";}
+.tile-8{background-color: var(--tile__color-8);}
+
+.tile-16::before {content: "16";}
+.tile-16{background-color: var(--tile__color-16);}
+
+.tile-32::before {content: "32";}
+.tile-32{background-color: var(--tile__color-32);}
+
+.tile-64::before {content: "64";}
+.tile-64{background-color: var(--tile__color-64);}
+
+.tile-128::before {content: "128";}
+.tile-128{background-color: var(--tile__color-128);}
+
+.tile-256::before {content: "256";}
+.tile-256{background-color: var(--tile__color-256);}
