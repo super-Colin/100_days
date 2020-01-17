@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2048</title>
+
+    <link rel="stylesheet" href="./037__2048.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="game-board">
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+            <div class="tile-spot"><div class="tile"></div></div>
+
+
+        </div>
+    </div>
+    <button onclick="button_reset()">Reset Game</button>
+    <button onclick="add_new_tile()">add new tile</button>
+
+    <div class="buttons-container">
+        <button onclick="sweep_up()">sweep up</button>
+        <span class="br"></span>
+        <button onclick="sweep_left()">sweep left</button>
+        <button onclick="sweep_right()">sweep right</button>
+        <span class="br"></span>
+        <button onclick="sweep_down()">sweep down</button>
+    </div>
+
+    <script src="./037__2048.js"></script>
+</body>
+</html>
