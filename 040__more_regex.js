@@ -1,127 +1,36 @@
-// 1/18/2020
-// Wanted to be a little more familiar with regex
+// 1/19/2020
+// More regex
 
-// https: //developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-// https: //developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
+// https: //www.youtube.com/watch?v=909NfO1St0A
 
-// https: //www.regular-expressions.info/tutorial.html
-let results = [];
-let re = /ab+c/;
+function escapeRegExp(string) {
+    return string.replace(/\d/, '\\$&'); // $& means the whole matched string
+}
 
-let re_object = new RegExp('ab+c');
-
-
-// --started following videos because... regex...
-// https: //www.youtube.com/watch?v=7DG3kCDx53c
-
-
-// * means "0 or more occurrences of the preceding item."
-// /ab*c/ //wil match "aaaabbbbbbbcccc" or "bbacc"
-
-// .* <--- THE WILDCARD
-// ^ matches any and everything ever always
-
-// This will find any phone number with -'s between(no spaces or parenthesis though)
-let newer = /\d\d\d-\d\d\d-\d\d\d\d/;
-
-// this re-done later:
-// let newer = /\d{3}-\d{3}-\d{4}/
-
-
-
-
-// Beyond this point video is using javascript "flavour" meta characters
-// https: //www.youtube.com/watch?v=YTocEnDsMNw
-
-
-// \d = digit "0-9"
-// \w = (word) "A-Z,a-z,0-9" any letter (caps or lowercase) or any digit
-// \s = white-space "space, tab"
-// . = anything 'anything whatsoever' [Note it does not need to be "escaped", Be careful with this one]
-
-// All 3 of these can be used in lowercase as above "\w" or with a capital flag
-// If capitalized they will return anything but what they would not return normally
-// basically a "not" logic gate
+// let results = escapeRegExp(long_string);
+const short_string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita minus dolorem tempora delectus, laudantium nihil double 12 456128 asd 12 as121a5s  repellat eligendi eaque nostrum repellendus nobis, debitis consequuntur aspernatur sit illo. Quasi eos dolorem repellendus? 1235469 123-156-4567`;
+ 
+let regex= /b/;
+let check_regex = regex.test(short_string);
+console.log('short result is:' + check_regex);
 
 
 
 
 
 
-
-
-
-// ---------------------------
-// quantifiers
-
-// * = 0 or more
-// + = 1 or more
-// ? = 0 or 1 (Optional [! is a good analogy])
-// {min,max}
-// {n} single amount
-
-
-
-
-// ---------------------------
-// position
-
-// ^  = beggining
-// $  = end
-// \b = word boundary
-
-
-// ^\w+ this will find all words at the beggining of a line
-// buuuuut..
-// \w+$ this will find all words at the end of a line
-// and finally
-// ^\w+$ will return all words (or digits) that are the only characters on that line
-
-
-
-// phone number again:
-    // my answers:
-    let regex123 = /(?\d{3}[-).]\d{3}[-.]\d{4}/ ;
-
-
-
-
-
-// _____________________________
-// ---------------------------
-// _____________________________
-// https: //www.youtube.com/watch?v=EfJU0Y9WAZ4
-
-// character classes
-// [] "or like"
-// [abc] match "a" or "b" or "c" //// or any amount of all 3 in sequence "aaacccbbcbbbbcbb"
-// [-.] "." is not a meta-character any more
-
-// (can escape meta-charaters with a backslash \[< becomes a normal bracket, \. becomes a period instead of wild])
-
-
-
-
-
-
-
-
-
-
-
-
-
-// colou?rs?
-
-// TEXT TO EXPLORE WITH REGEX:
-let long_string = `
-
+const long_string = `
 
 // colou?rs? will find these all of these:
 color
 colors
 colour
 colours
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit.Expedita minus dolorem tempora delectus, laudantium nihil repellat eligendi eaque nostrum repellendus nobis, debitis consequuntur aspernatur sit illo.Quasi eos dolorem repellendus ?
+
 
 Quick Start
 Tutorial
@@ -227,4 +136,8 @@ Printable PDF
 About This Site
 RSS Feed & Blog
 `
-console.log(results);
+
+
+let results = escapeRegExp(long_string);
+
+// console.log('results = ' + results);
