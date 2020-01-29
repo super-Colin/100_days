@@ -39,6 +39,6 @@ let dogArray = [
     new Dog(7, 'Pyreneese', false), new Dog(2, 'Mutt', true)
 ];
 
-console.log('static call: ' + Dog.genus);
+// console.log('static call: ' + Dog.genus);
 console.log(chewy.getRelativeAge(), chewy.genus, chewy.playsFetch);
 console.log(dogArray[1].getRelativeAge(), dogArray[1].genus, dogArray[1].playsFetch);
