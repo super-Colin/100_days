@@ -1,3 +1,1 @@
-The idea of this is basically to code for as many days in a row as possible, 100 days if I can, and if I manage that then I'll try to code all 365 days of 2020
-
-Wish me luck :)
+Finding a new thing to explore that is also small enough to complete in an hour or two everyday has become a bit of a chore on it's own, so I've decided to move this repo towards more of a javascript method of the day thing. That should make it easier for me to spend more time learning and less time looking for something new to learn!
