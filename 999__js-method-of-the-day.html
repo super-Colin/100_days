@@ -91,11 +91,22 @@
     <button ondblclick="testOnDblClick()">ondblclick = Double Click Me!</button>
     <hr>
     
-    <h3>Day 65</h3>
-    <button onmouseover="testOnMouseOver()">onmouseover = Mouse Over Me!</button>
-    <button onmouseout="testOnMouseOut()">onmouseout = Mouse Over Me!</button>
+    <h3>Day 65 Mouseover / Mousedown</h3>
     <button onmousedown="testOnMouseDown()">onmousedown = First half of click</button>
     <button onmouseup="testOnMouseUp()">onmouseup = Second half of click</button>
+    <button onmouseover="testOnMouseOver()">onmouseover = Mouse Over Me!</button>
+    <button onmouseout="testOnMouseOut()">onmouseout = Mouse Over Me!</button>
+    <hr>
+
+    <h3>Day 66 Keyboard Events</h3>
+    <p>type inside this purple input to test onkeydown / onkeyup</p>
+
+    <input
+    id="keyboard-input"
+    style="background-color: purple; color: white;" 
+    onkeydown="testOnKeyDown()"
+    onkeyup="testOnKeyUp()"
+    >
     <hr>
     
 
@@ -140,5 +151,6 @@
 <script src="./063__more-window.js"></script>
 <script src="./064__mouse-events.js"></script>
 <script src="./065__more-mouse-events.js"></script>
+<script src="./066__keyboard-events.js"></script>
 </body style="">
 </html>
