@@ -8,6 +8,7 @@
 function testOnBlur(){
     let blured = document.getElementById('onblur');
     blured.value = blured.value.toUpperCase();
+    blured.style.background = 'yellow';
 }
 
 function testOnChange(){
