@@ -131,6 +131,16 @@
     <p id="oninputP">onchange input value:</p>
     <hr>
 
+    <h3>Day 69 Clipboard Events</h3>
+    <p>onfocus is the opposite of onblur, oninput is what I thought onchange would be</p>
+    <label for="oncopy">oncopy=""</label>
+    <input type="text" name="oncopy" id="oncopy" oncopy="testOnCopy()" value="Copy this text! (ctrl + c)">
+    <label for="oncut">oncut=""</label>
+    <input type="text" name="oncut" id="oncut" oncut="testOnCut()" value="Cut this text! (ctrl + x)">
+    <label for="onpaste">onpaste=""</label>
+    <input type="text" name="onpaste" id="onpaste" onpaste="testOnPaste()" value="Paste text here! (ctrl + v)">
+    <hr>
+
 
 
     <h2>These are used in most functions</h2>
@@ -176,5 +186,6 @@
 <script src="./066__keyboard-events.js"></script>
 <script src="./067__form-events.js"></script>
 <script src="./068__more-form-events.js"></script>
+<script src="./069__clipboard.js"></script>
 </body>
 </html>
