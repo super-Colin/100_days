@@ -110,17 +110,27 @@
     <hr>
 
     <h3>Day 67 Form Events</h3>
-        <p>onblur will capitalize a string on leaving focus, onchange fires when a change has "stabilized"</p>
-        <label for="onblur">onblur=""</label>
-        <input type="text" name="onblur" id="onblur" onblur="testOnBlur()">
-        <label for="onchange">onchange=""</label>
-        <select name="onchange" id="onchange" onchange="testOnChange()">
-            <option value="Option 1 Value">Option 1</option>
-            <option value="Option 2 Value">Option 2</option>
-            <option value="Option 3 Value">Option 3</option>
-        </select>
-        <p id="onchangeP"></p>
+    <p>onblur will capitalize a string on leaving focus, onchange fires when a change has "stabilized"</p>
+    <label for="onblur">onblur=""</label>
+    <input type="text" name="onblur" id="onblur" onblur="testOnBlur()">
+    <label for="onchange">onchange=""</label>
+    <select name="onchange" id="onchange" onchange="testOnChange()">
+        <option value="Option 1 Value">Option 1</option>
+        <option value="Option 2 Value">Option 2</option>
+        <option value="Option 3 Value">Option 3</option>
+    </select>
+    <p id="onchangeP"></p>
     <hr>
+
+    <h3>Day 68 More Form Events</h3>
+    <p>onfocus is the opposite of onblur, oninput is what I thought onchange would be</p>
+    <label for="onfocus">onfocus=""</label>
+    <input type="text" name="onfocus" id="onfocus" onfocus="testOnFocus(this)">
+    <label for="oninput">oninput=""</label>
+    <input type="text" name="onpinput" id="oninput" oninput="testOnInput(this)">
+    <p id="oninputP">onchange input value:</p>
+    <hr>
+
 
 
     <h2>These are used in most functions</h2>
@@ -165,5 +175,6 @@
 <script src="./065__more-mouse-events.js"></script>
 <script src="./066__keyboard-events.js"></script>
 <script src="./067__form-events.js"></script>
-</body style="">
+<script src="./068__more-form-events.js"></script>
+</body>
 </html>
