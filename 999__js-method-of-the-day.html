@@ -141,6 +141,22 @@
     <input type="text" name="onpaste" id="onpaste" onpaste="testOnPaste()" value="Paste text here! (ctrl + v)">
     <hr>
 
+    <h3>Day 70 Animation Events</h3>
+    <style>
+        #animationDiv{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+        @keyframes testAnimation {
+            from{left: 0}
+            to {left: 200px}
+        }
+    </style>
+    <button onclick="startTestAnimation()">Start Animation</button>
+    <div id="animationDiv"></div>
+    <p id="animationP"></p>
 
 
     <h2>These are used in most functions</h2>
@@ -187,5 +203,6 @@
 <script src="./067__form-events.js"></script>
 <script src="./068__more-form-events.js"></script>
 <script src="./069__clipboard.js"></script>
+<script src="./070__animations.js"></script>
 </body>
 </html>
