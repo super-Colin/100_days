@@ -157,6 +157,32 @@
     <button onclick="startTestAnimation()">Start Animation</button>
     <div id="animationDiv"></div>
     <p id="animationP"></p>
+    <hr>
+
+
+    <h3>Day 71 Dragging</h3>
+    <div 
+        ondrop="testOnDrop(event)" 
+        ondragover="testOnDragOver(event)" 
+        style="width: 100px; height: 30px; border: 1px solid black; margin-bottom: 30px;"
+    >
+    <p
+        ondragstart="testOnDragStart(event)" 
+        draggable="true"
+        id="dragTarget"
+    >
+        Drag Me!
+    </p>
+    </div>
+    <div 
+        ondrop="testOnDrop(event)" 
+        ondragover="testOnDragOver(event)" 
+        style="width: 100px; height: 30px; border: 1px solid black;"
+    >
+    </div>
+    <p>Learned that the draggable element must have an id for this method</p>
+    <hr>
+
 
 
     <h2>These are used in most functions</h2>
@@ -166,7 +192,7 @@
     <br>
     <label for="input-number">Input Number</label>
     <input type="number" name="input-number" id="input-number">
-
+    
 
 
     <hr>
@@ -204,5 +230,6 @@
 <script src="./068__more-form-events.js"></script>
 <script src="./069__clipboard.js"></script>
 <script src="./070__animations.js"></script>
+<script src="./071__drag.js"></script>
 </body>
 </html>
