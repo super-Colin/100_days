@@ -184,6 +184,35 @@
     <hr>
 
 
+    <h3>Day 72 More Dragging</h3>
+    <div 
+        ondrop="testOnDrop2(event)" 
+        ondragover="testOnDragOver2(event)" 
+        style="width: 100px; height: 30px; border: 1px solid black; margin-bottom: 30px;"
+    >
+    <p
+        ondragstart="testOnDragStart2(event)" 
+        draggable="true"
+        id="dragTarget2"
+        ondragend="testOnDragEnd2()"
+    >
+        Drag Me!
+    </p>
+    </div>
+    <span>lower box has ondrag property</span>
+    <div 
+        ondrop="testOnDrop2(event)" 
+        ondragover="testOnDragOver2(event)" 
+        ondrag="testOnDrag2()"
+        ondragenter="testOnDragEnter2()"
+        ondragleave="testOnDragLeave2()"
+        style="width: 100px; height: 30px; border: 1px solid black;"
+    >
+    </div>
+    <p id="draggingP2">Something</p>
+    <hr>
+
+
 
     <h2>These are used in most functions</h2>
 
@@ -231,5 +260,6 @@
 <script src="./069__clipboard.js"></script>
 <script src="./070__animations.js"></script>
 <script src="./071__drag.js"></script>
+<script src="./072__more-dragging.js"></script>
 </body>
 </html>
