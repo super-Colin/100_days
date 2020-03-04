@@ -1,1 +1,1 @@
-Finding a new thing to explore that is also small enough to complete in an hour or two everyday has become a bit of a chore on it's own, so I've decided to move this repo towards more of a javascript method of the day thing. That should make it easier for me to spend more time learning and less time looking for something new to learn!
+Learning something new everyday!
